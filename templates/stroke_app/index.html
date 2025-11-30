@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Intelligent Stroke Prediction System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+<body>
+  <div id="mario-climber" class="mario-climber"></div>
+
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline poster="" id="hero-video">
+      <source src="/static/video/videoplayback.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1 class="hero-title">Intelligent Stroke Prediction Platform</h1>
+        <p class="hero-subtitle">Mario-inspired clinical journey: scroll down to evaluate personalized stroke risk using demographics, physiology, and medical history.</p>
+        <button type="button" class="primary-btn hero-cta" id="enter-platform-btn">
+          Enter Stroke Prediction Platform
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div id="platform" class="app">
+    <header class="app-header">
+      <div>
+        <h1>Intelligent Stroke Prediction System</h1>
+        <p>Clinical decision support based on demographic, physiological and medical history data.</p>
+      </div>
+      <button id="reset-btn" class="ghost-btn">Reset Form</button>
+    </header>
+
+    <main class="app-main">
+      <div class="panel-container">
+        <section class="panel results-panel">
+          <h2>Stroke Risk Assessment</h2>
+          
+          <div class="upload-section">
+            <form id="csv-upload-form">
+              <button type="submit" class="primary-btn">
+                Upload and Process CSV
+              </button>
+            </form>
+          </div>
+
+          <div id="results-container" class="results-container">
+            <div id="no-results">
+              <p>No data to display. Please upload a CSV file to view stroke risk assessments.</p>
+            </div>
+            <div id="risk-results"></div>
+          </div>
+
+          <p class="disclaimer">
+            This tool is intended as decision support only and must not replace clinical judgement.
+          </p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+  <script src="/static/js/stroke_predictions.js"></script>
+</body>
+</html>
